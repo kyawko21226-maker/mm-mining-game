@@ -10,7 +10,7 @@ import time
 import telebot
 
 # CONFIG
-BOT_TOKEN = "YOUR_BOT_TOKEN"
+BOT_TOKEN = "8840003564:AAGdvQ32_6SOqgJYzjy0xTxERFc3JlytRoY"
 bot = telebot.TeleBot(BOT_TOKEN)
 
 # CONSTANTS
