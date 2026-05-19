@@ -16,6 +16,18 @@ bot = telebot.TeleBot(BOT_TOKEN)
 @bot.message_handler(commands=['start'])
 def start(message):
     bot.reply_to(message, "Welcome to MM Mining Game!")
+
+@bot.message_handler(commands=['mine'])
+def mine(message):
+    bot.reply_to(message, "Mining started ⛏")
+
+@bot.message_handler(commands=['invite'])
+def invite(message):
+    bot.reply_to(message, "Your invite link: https://t.me/YourBot")
+
+@bot.message_handler(commands=['withdraw'])
+def withdraw(message):
+    bot.reply_to(message, "Minimum withdraw is 0.01 TON")
     
 # CONSTANTS
 MINING_DURATION = 3600
