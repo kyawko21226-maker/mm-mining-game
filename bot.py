@@ -46,6 +46,7 @@ def home():
     return "Bot is running!"
 
 def run_bot():
+    print("Bot polling started...")
     bot.infinity_polling()
 
 if __name__ == "__main__":
