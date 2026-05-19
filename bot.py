@@ -26,16 +26,31 @@ def start(message):
 
 @bot.message_handler(commands=['mine'])
 def mine(message):
-    bot.reply_to(message, "Mining started ⛏")
+    bot.reply_to(message, "Mining started ⛏"
 
 @bot.message_handler(commands=['invite'])
 def invite(message):
-    bot.reply_to(message, "Your invite link: https://t.me/YourBot")
+    bot.reply_to(message, "Your invite link: https://t.me/MMMiningGame_bot")
 
 @bot.message_handler(commands=['withdraw'])
 def withdraw(message):
     bot.reply_to(message, "Minimum withdraw is 0.01 TON")
-bot.infinity_polling()
+
+@bot.message_handler(commands=['leaderboard'])
+def leaderboard(message):
+    bot.reply_to(message, "Top miners coming soon!")
+
+@bot.message_handler(commands=['mystats'])
+def mystats(message):
+    bot.reply_to(message, "Your balance: 0 TON")
+
+@bot.message_handler(commands=['help'])
+def help(message):
+    bot.reply_to(message, "Commands:\n/start\n/mine\n/invite\n/withdraw\n/leaderboard\n/mystats\n/about")
+
+@bot.message_handler(commands=['about'])
+def about(message):
+    bot.reply_to(message, "MM Mining Game Bot v1")                 
 
 # DATABASE
 def db():
