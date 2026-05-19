@@ -10,8 +10,15 @@ import time
 import telebot
 
 # CONFIG
-BOT_TOKEN = "8840003564:AAGdvQ32_6SOqgJYzjy0xTxERFc3JlytRoY"
+BOT_TOKEN = "8840003564:AAGXM8nRIr6eHFmHGMfW84mj9DEUEK2sNAs"
 bot = telebot.TeleBot(BOT_TOKEN)
+
+# CONSTANTS
+MINING_DURATION = 3600
+BASE_SPEED = 100
+BOOST_AMOUNT = 50
+TON_PER_QUBIT = 0.00000000002
+MIN_WITHDRAW = 0.01
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -28,13 +35,7 @@ def invite(message):
 @bot.message_handler(commands=['withdraw'])
 def withdraw(message):
     bot.reply_to(message, "Minimum withdraw is 0.01 TON")
-    
-# CONSTANTS
-MINING_DURATION = 3600
-BASE_SPEED = 100
-BOOST_AMOUNT = 50
-TON_PER_QUBIT = 0.00000000002
-MIN_WITHDRAW = 0.01
+bot.infinity_polling()
 
 # DATABASE
 def db():
